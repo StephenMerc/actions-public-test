@@ -27,6 +27,7 @@ jobs:
 
   staging-hello:
     environment: staging
+    needs: dev-hello
     runs-on: ubuntu-latest
     steps:
       - name: approved
