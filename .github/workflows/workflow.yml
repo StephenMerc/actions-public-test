@@ -32,3 +32,12 @@ jobs:
     steps:
       - name: approved
         run: echo "Hello ${{ inputs.name }}"
+
+
+  staging-eu-hello:
+    environment: staging-eu
+    needs: dev-hello
+    runs-on: ubuntu-latest
+    steps:
+      - name: approved
+        run: echo "Hello ${{ inputs.name }}"
